@@ -6,5 +6,5 @@ class Calendarizado extends Partido {
     }
 
     Date fechaInicial;
-    Int periodicidad;
+    int periodicidad;
 }

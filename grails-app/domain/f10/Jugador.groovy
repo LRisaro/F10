@@ -6,7 +6,7 @@ class Jugador {
     }
 
     String nombre;
-    Int edad;
+    int edad;
     String email;
     String whatsapp;
     Reputacion reputacion;
