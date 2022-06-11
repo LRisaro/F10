@@ -11,8 +11,11 @@ class DireccionSpec extends Specification implements DomainUnitTest<Direccion> {
     def cleanup() {
     }
 
-    void "test something"() {
+    void "CrearNuevaDireccion"() {
+
+        Direccion direccion = new Direccion(calle: "Suipacha", altura: "875");
         expect:"fix me"
-            true == false
+            direccion.calle == "Suipacha";
+            direccion.altura == "875";
     }
 }

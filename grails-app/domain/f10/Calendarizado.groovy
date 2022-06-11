@@ -1,7 +1,10 @@
 package f10
 
-class Calendarizado {
+class Calendarizado extends Partido {
 
     static constraints = {
     }
+
+    Date fechaInicial;
+    int periodicidad;
 }
