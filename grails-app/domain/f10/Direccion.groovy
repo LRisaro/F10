@@ -4,4 +4,7 @@ class Direccion {
 
     static constraints = {
     }
+
+    String calle;
+    String altura;
 }

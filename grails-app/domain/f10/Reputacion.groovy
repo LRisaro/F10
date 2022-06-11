@@ -4,4 +4,7 @@ class Reputacion {
 
     static constraints = {
     }
+
+    Int partidosAbandonados;
+    Int partidosJugados;
 }

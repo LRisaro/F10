@@ -4,4 +4,7 @@ class GrupoDeAmigos {
 
     static constraints = {
     }
+
+    String nombre;
+    // Lista de jugadores
 }

@@ -4,4 +4,8 @@ class Establecimiento {
 
     static constraints = {
     }
+
+    String nombre;
+    String telefono;
+    Direccion direccion;
 }

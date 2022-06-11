@@ -1,7 +1,9 @@
 package f10
 
-class Casual {
+class Casual extends Partido {
 
     static constraints = {
     }
+
+
 }
