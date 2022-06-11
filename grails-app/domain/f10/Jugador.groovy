@@ -10,5 +10,5 @@ class Jugador {
     String email;
     String whatsapp;
     Reputacion reputacion;
-    // gruposDeAmigos as list
+    def gruposDeAmigos = [];
 }

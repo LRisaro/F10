@@ -6,5 +6,5 @@ class GrupoDeAmigos {
     }
 
     String nombre;
-    // Lista de jugadores
+    def jugadores = [];
 }

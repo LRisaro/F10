@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="f10.GrupoDeAmigosSpec" tests="1" skipped="0" failures="1" errors="0" timestamp="2022-06-11T19:58:33" hostname="Lenovo" time="0.002">
+  <properties/>
+  <testcase name="test something" classname="f10.GrupoDeAmigosSpec" time="0.002">
+    <failure message="Condition not satisfied:&#10;&#10;true == false&#10;     |&#10;     false&#10;" type="org.spockframework.runtime.SpockComparisonFailure">Condition not satisfied:
+
+true == false
+     |
+     false
+
+	at f10.GrupoDeAmigosSpec.test something(GrupoDeAmigosSpec.groovy:16)
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
