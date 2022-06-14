@@ -5,8 +5,8 @@ class Partido {
     static constraints = {
     }
 
-    // jugadores anotados
-    // jugadores confirmados
+    def jugadoresAnotados = [];
+    def jugadoresConfirmados = [];
     Date fecha;
     Cancha cancha;
     EstadosPartido estado;
