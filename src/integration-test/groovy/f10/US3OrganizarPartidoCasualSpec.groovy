@@ -21,9 +21,9 @@ class US3OrganizarPartidoCasualSpec extends Specification {
         Jugador jugadorOrganizador = new Jugador(nombre: "Javier", edad: 23, email: "jnunezl@fi.uba.ar", whatsapp: "11-2243-6789", reputacion: reputacion);
 
         GrupoDeAmigos grupoDeAmigos = new GrupoDeAmigos(nombre: "FUTBOL 24/7");
-        grupoDeAmigos.jugadores.add(jugadorOrganizador);
+        grupoDeAmigos.agregarAmigo(jugadorOrganizador);
 
-        jugadorOrganizador.gruposDeAmigos.add(grupoDeAmigos);
+        jugadorOrganizador.agregarGrupoDeAmigos(grupoDeAmigos);
 
         when:"Quiero seleccionar un día, horario y cancha."
 
@@ -33,15 +33,10 @@ class US3OrganizarPartidoCasualSpec extends Specification {
         Cancha cancha = new Cancha(numero: 5);
 
         // Buscar cancha disponible en establecimiento
-
-        Casual partidoCasual = new Casual();
+        def fecha = new Date();
+        Casual partidoCasual = new Casual(fecha, cancha);
         partidoCasual.anotarJugador(jugadorOrganizador);
         partidoCasual.confirmarJugador(jugadorOrganizador);
-
-        // deberia estar en el constructor
-        partidoCasual.fecha = new Date();
-        partidoCasual.cancha = cancha;
-        partidoCasual.estado = EstadosPartido.PENDIENTE;
 
         then:"Crear partido casual y notificar a todos los miembros de mi grupo de amigos."
         partidoCasual.jugadoresAnotados.size == 1;
