@@ -45,6 +45,8 @@ class US3OrganizarPartidoCasualSpec extends Specification {
         then:"Crear partido casual y notificar a todos los miembros de mi grupo de amigos."
         partidoCasual.jugadoresAnotados.size == 1;
         partidoCasual.jugadoresConfirmados.size == 1;
+        partidoCasual.estado == EstadosPartido.PENDIENTE;
+        partidoCasual.cancha.numero == "5";
         // add id in a new base entity 
     }
 }

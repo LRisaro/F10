@@ -35,3 +35,5 @@
 # exclude reports
 /build/reports/*
 /build/test-results/*
+
+*.bin
