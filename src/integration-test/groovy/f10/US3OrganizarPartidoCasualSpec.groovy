@@ -35,12 +35,13 @@ class US3OrganizarPartidoCasualSpec extends Specification {
         // Buscar cancha disponible en establecimiento
 
         Casual partidoCasual = new Casual();
-        partidoCasual.jugadoresAnotados.add(jugadorOrganizador);
-        partidoCasual.jugadoresConfirmados.add(jugadorOrganizador);
+        partidoCasual.anotarJugador(jugadorOrganizador);
+        partidoCasual.confirmarJugador(jugadorOrganizador);
+
+        // deberia estar en el constructor
         partidoCasual.fecha = new Date();
         partidoCasual.cancha = cancha;
         partidoCasual.estado = EstadosPartido.PENDIENTE;
-
 
         then:"Crear partido casual y notificar a todos los miembros de mi grupo de amigos."
         partidoCasual.jugadoresAnotados.size == 1;
