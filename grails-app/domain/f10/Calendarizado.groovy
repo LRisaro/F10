@@ -7,4 +7,8 @@ class Calendarizado extends Partido {
 
     Date fechaInicial;
     int periodicidad;
+
+    Calendarizado(fecha, cancha) {
+        super(fecha, cancha);
+    }
 }
