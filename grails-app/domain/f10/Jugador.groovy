@@ -9,7 +9,7 @@ class Jugador {
     int edad;
     String email;
     String whatsapp;
-    Reputacion reputacion;
+    Reputacion reputacion = new Reputacion()
     def gruposDeAmigos = [];
 
     Jugador(nombre, edad, email, whatsapp) {
@@ -21,5 +21,9 @@ class Jugador {
 
     def agregarGrupoDeAmigos(grupoDeAmigos) {
         gruposDeAmigos.add(grupoDeAmigos);
+    }
+
+    def penalizar(){
+        reputacion.partidosAbandonados +=  1
     }
 }

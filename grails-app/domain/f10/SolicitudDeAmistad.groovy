@@ -16,9 +16,9 @@ class SolicitudDeAmistad {
     }
 
     def aceptarSolicitud(){
-        this.estado = EstadosSolicitud.ACEPTADA
         this.jugadorDestino.agregarGrupoDeAmigos(this.grupoSolicitante)
         this.grupoSolicitante.agregarAmigo(this.jugadorDestino)
+        this.estado = EstadosSolicitud.ACEPTADA
     }
 
     def rechazarSolicitud(){
