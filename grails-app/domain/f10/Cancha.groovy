@@ -6,6 +6,4 @@ class Cancha {
     }
 
     String numero;
-    String hora;
-    Date fecha;
 }

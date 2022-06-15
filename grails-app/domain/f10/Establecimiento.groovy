@@ -8,4 +8,5 @@ class Establecimiento {
     String nombre;
     String telefono;
     Direccion direccion;
+    def canchas = []
 }

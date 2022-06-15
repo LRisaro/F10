@@ -5,5 +5,4 @@ class Casual extends Partido {
     static constraints = {
     }
 
-
 }
