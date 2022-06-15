@@ -11,8 +11,11 @@ class ReputacionSpec extends Specification implements DomainUnitTest<Reputacion>
     def cleanup() {
     }
 
-    void "test something"() {
+    void "CrearReputacion"() {
+         Reputacion reputacion = new Reputacion(partidosAbandonados: 0, partidosJugados: 16);
+
         expect:"fix me"
-            true == true
+            reputacion.partidosAbandonados = 0;
+            reputacion.partidosJugados = 16;
     }
 }
