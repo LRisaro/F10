@@ -1,11 +1,9 @@
 package f10
 
-class Partido {
+abstract class Partido {
 
     static constraints = {
     }
-
-    // Constructor (fecha, cancha)
     // Cuadno se crea un nuevo partido es necesario notificar al grupo de amigo del jugador que organiza el partido.
 
     def jugadoresAnotados = [];
@@ -13,7 +11,13 @@ class Partido {
     def jugadoresSuplentes = [];
     Date fecha;
     Cancha cancha;
-    EstadosPartido estado = EstadosPartido.PENDIENTE;
+    EstadosPartido estado;
+
+    Partido(fecha, cancha) {
+        this.fecha = fecha;
+        this.cancha = cancha;
+        this.estado = EstadosPartido.PENDIENTE;
+    }
 
     def anotarJugador(jugador) {
 
@@ -54,5 +58,10 @@ class Partido {
         if(jugadoresSuplentes.size() > 0){
             jugadoresAnotados.push(jugadoresSuplentes.pop());
         }
+    }
+    
+    def darDeBajaJugador(jugador){
+        jugadoresConfirmados.remove(jugador)
+        jugador.penalizar()
     }
 }

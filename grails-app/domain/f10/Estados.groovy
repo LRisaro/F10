@@ -5,3 +5,9 @@ enum EstadosPartido {
     CANCELADO,
     FINALIZADO
 }
+
+enum EstadosSolicitud {
+    PENDIENTE,
+    RECHAZADA,
+    ACEPTADA
+}
