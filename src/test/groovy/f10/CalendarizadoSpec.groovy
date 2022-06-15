@@ -11,8 +11,15 @@ class CalendarizadoSpec extends Specification implements DomainUnitTest<Calendar
     def cleanup() {
     }
 
-    void "test something"() {
-        expect:"fix me"
-            true == false
+    void "CrearPartidoCalendarizado"() {
+        Date fechaInicial = new Date();
+        int periodicidad = 7;
+        Cancha cancha = new Cancha(numero: 6);
+
+        Calendarizado calendarizado = new Calendarizado(fechaInicial, periodicidad, cancha);
+        expect:"Se crea el partido calendarizado"
+            calendarizado.periodicidad == 7
+            calendarizado.cancha.numero == "6"
+            calendarizado.fechaInicial == fechaInicial;
     }
 }

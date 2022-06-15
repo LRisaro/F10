@@ -29,13 +29,12 @@ class US4OrganizarPartidoCalendarizadoSpec extends Specification {
         // Buscar cancha disponible en establecimiento
         Cancha cancha = new Cancha(numero: 7);
 
-        // Buscar cancha disponible en establecimiento
         def fechaInicial = new Date();
         def periodicidad = 7;
 
         Calendarizado partidoCalendarizado = new Calendarizado(fechaInicial, periodicidad, cancha);
 
-        then:"Crear partido calendarizado y notificar a todos los miembros de mi grupo de amigos."
+        then:"Partido calendarizado."
 
         partidoCalendarizado.partidos.size == 1; 
         def partidoEnCurso = partidoCalendarizado.proximoPartido();
