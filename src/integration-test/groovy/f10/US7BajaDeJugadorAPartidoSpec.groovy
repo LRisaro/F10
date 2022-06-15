@@ -18,8 +18,9 @@ class US7BajaDeJugadorAPartidoSpec extends Specification {
             Jugador jugador1 = new Jugador()
             Jugador jugador2 = new Jugador()
             Casual partido = new Casual(new Date(), new Cancha())
-            partido.jugadoresConfirmados = [jugador1, jugador2]
-
+            partido.confirmarJugador(jugador1)
+            partido.confirmarJugador(jugador2)
+            
         when: "me doy de baja del partido"
             partido.darDeBajaJugador(jugador2)
 
@@ -33,7 +34,8 @@ class US7BajaDeJugadorAPartidoSpec extends Specification {
             Jugador jugador1 = new Jugador()
             Jugador jugador2 = new Jugador()
             Casual partido = new Casual(new Date(), new Cancha())
-            partido.jugadoresConfirmados = [jugador1, jugador2]
+            partido.confirmarJugador(jugador1)
+            partido.confirmarJugador(jugador2)
 
         when: "me doy de baja del partido"
             partido.darDeBajaJugador(jugador1)
