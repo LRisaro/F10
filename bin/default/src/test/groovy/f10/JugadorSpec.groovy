@@ -11,8 +11,12 @@ class JugadorSpec extends Specification implements DomainUnitTest<Jugador> {
     def cleanup() {
     }
 
-    void "Creo un jugador nuevo"() {
-        Jugador jugador = new Jugador(nombre: "jugador", edad: 18, email: "asd@asd.com", whatsapp: '123456789', reputacion: new  Reputacion());
+    void "CreoJugadorNuevo"() {
+
+        Reputacion reputacion = new Reputacion(partidosAbandonados: 0, partidosJugados: 16);
+
+        Jugador jugador = new Jugador(nombre: "jugador", edad: 18, email: "asd@asd.com", whatsapp: '123456789', reputacion: reputacion);
+
         expect:"fix me"
             jugador.nombre == "jugador";
             jugador.edad == 18;

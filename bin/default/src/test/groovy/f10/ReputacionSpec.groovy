@@ -15,7 +15,7 @@ class ReputacionSpec extends Specification implements DomainUnitTest<Reputacion>
          Reputacion reputacion = new Reputacion(partidosAbandonados: 0, partidosJugados: 16);
 
         expect:"fix me"
-            reputacion.partidosAbandonados = 0;
-            reputacion.partidosJugados = 16;
+            reputacion.partidosAbandonados == 0;
+            reputacion.partidosJugados == 16;
     }
 }

@@ -87,10 +87,6 @@ bootRun {
     systemProperty springProfilesActive, System.getProperty(springProfilesActive)
 }
 
-tasks.withType(GroovyCompile) {tasks.withType(Test){
-scanForTestClasses = false
-include "**/*Test.class"
- }
 tasks.withType(Test) {
     useJUnitPlatform()
 }

@@ -13,11 +13,13 @@ class PartidoSpec extends Specification implements DomainUnitTest<Partido> {
 
     void "test something"() {
         Jugador jugador = new Jugador(nombre: "Micaela")
+        Jugador jugador1 = new Jugador(nombre: "Micaela2")
+
         Partido partido = new Partido();
         partido.jugadores.add(jugador)
+        partido.jugadores.add(jugador1)
 
-        expect:"fix me"
-            partido.jugadores.size() == 1
-            partido.jugadores[0].nombre == "Micaela";
+        partido.jugadores.size() == 2
+        partido.jugadores[0].nombre == "Micaela";
     }
 }
