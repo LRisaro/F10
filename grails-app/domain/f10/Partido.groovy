@@ -31,4 +31,9 @@ abstract class Partido {
     def confirmarJugador(jugador) {
         jugadoresConfirmados.add(jugador)
     }
+
+    def darDeBajaJugador(jugador){
+        jugadoresConfirmados.remove(jugador)
+        jugador.penalizar()
+    }
 }
