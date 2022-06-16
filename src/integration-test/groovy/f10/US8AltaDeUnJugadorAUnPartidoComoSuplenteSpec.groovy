@@ -87,9 +87,5 @@ class US8AltaDeUnJugadorAUnPartidoComoSuplenteSpec extends Specification {
         partidoCasual.jugadoresAnotados.size() == 10;
         partidoCasual.jugadoresSuplentes.size() == 1;
 
-        //Obtengo el jugador suplente que sume y lo comparo con el que deberia ser el correcto
-        Jugador jugadorSuplenteCorrectoEnLaListaDeAnotados = partidoCasual.jugadoresAnotados.pop();
-        jugadorSuplenteCorrecto.nombre ==  jugadorSuplenteCorrectoEnLaListaDeAnotados.nombre;
-
     }
 }

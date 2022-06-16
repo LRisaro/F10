@@ -20,18 +20,14 @@ class Partido {
     }
 
     def anotarJugador(jugador) {
-
-        if(jugadoresAnotados.size() < 10)
-        {
-            jugadoresAnotados.add(jugador);
+        if (jugador.reputacion.tieneBuenaReputacion()) {
+            if (jugadoresAnotados.size < 10) {
+                jugadoresAnotados.add(jugador)
+            } else {
+                jugadoresSuplentes.add(jugador)
+            }
         }
-        else 
-        {
-            anotarJugadorSuplente(jugador);            
-        }
-
-        // hay 10 jugadores anotados
-        // notificacion al grupo
+    // TODO notificacion al grupo
     }
 
     def confirmarJugador(jugador) {

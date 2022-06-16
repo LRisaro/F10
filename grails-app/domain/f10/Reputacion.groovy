@@ -14,11 +14,12 @@ class Reputacion {
     }
 
     def tieneBuenaReputacion() {
-        if (partidosAbandonados == 0) {
-            return true
+        //TODO  La buena o mala reputacion se va a basar en el porcentaje de partidos jugados
+        if((partidosJugados + partidosAbandonados) == 0 || (partidosJugados > partidosAbandonados))
+        {
+            return true;
         }
-
-        return false
+        return false;
     }
 
 }
