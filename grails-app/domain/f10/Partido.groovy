@@ -1,6 +1,6 @@
 package f10
 
-abstract class Partido {
+class Partido {
 
     static constraints = {
     }

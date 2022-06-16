@@ -1,7 +1,6 @@
 package f10
 
 import grails.testing.mixin.integration.Integration
-import grails.gorm.transactions.*
 import spock.lang.Specification
 
 @Integration
@@ -25,24 +24,21 @@ class US3OrganizarPartidoCasualSpec extends Specification {
 
         jugadorOrganizador.agregarGrupoDeAmigos(grupoDeAmigos);
 
-        when:"Quiero seleccionar un día, horario y cancha."
-
-        // Establecimiento 
-        Direccion direccion = new Direccion(calle: "Paseo colon", altura: "850");
-
-        Cancha cancha = new Cancha(numero: 5);
+        when:"Quiero seleccionar un día, horario y cancha para jugar un partido."
 
         // Buscar cancha disponible en establecimiento
+        Cancha cancha = new Cancha(numero: 5);
+
         def fecha = new Date();
         Casual partidoCasual = new Casual(fecha, cancha);
         partidoCasual.anotarJugador(jugadorOrganizador);
         partidoCasual.confirmarJugador(jugadorOrganizador);
 
-        then:"Crear partido casual y notificar a todos los miembros de mi grupo de amigos."
+        then:"Partido casual creado."
+
         partidoCasual.jugadoresAnotados.size == 1;
         partidoCasual.jugadoresConfirmados.size == 1;
         partidoCasual.estado == EstadosPartido.PENDIENTE;
         partidoCasual.cancha.numero == "5";
-        // add id in a new base entity 
     }
 }
