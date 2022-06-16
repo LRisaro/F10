@@ -11,8 +11,14 @@ class CasualSpec extends Specification implements DomainUnitTest<Casual> {
     def cleanup() {
     }
 
-    void "test something"() {
-        expect:"fix me"
-            true == false
+    void "CrearPartidoCasual"() {
+        Date fecha = new Date();
+        Cancha cancha = new Cancha(numero: 6);
+
+        Casual partidoCasual = new Casual(fecha, cancha);
+
+        expect:"Se crea partido casual"
+            partidoCasual.cancha.numero == "6"
+            partidoCasual.fecha == fecha;
     }
 }

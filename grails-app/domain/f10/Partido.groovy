@@ -1,25 +1,22 @@
 package f10
 
-abstract class Partido {
+class Partido {
 
     static constraints = {
     }
     // Cuadno se crea un nuevo partido es necesario notificar al grupo de amigo del jugador que organiza el partido.
 
-    def jugadoresAnotados = [];
-    def jugadoresConfirmados = [];
-    def jugadoresSuplentes = [];
-    Date fecha;
-    Cancha cancha;
-    EstadosPartido estado;
+    def jugadoresAnotados = []
+    def jugadoresConfirmados = []
+    def jugadoresSuplentes = []
+    Date fecha
+    Cancha cancha
+    EstadosPartido estado
 
     Partido(fecha, cancha) {
         this.fecha = fecha;
         this.cancha = cancha;
         this.estado = EstadosPartido.PENDIENTE;
-        this.jugadoresAnotados = [];
-        this.jugadoresConfirmados = [];
-        this.jugadoresSuplentes = [];
     }
 
     def anotarJugador(jugador) {
@@ -61,4 +58,5 @@ abstract class Partido {
         jugadoresConfirmados.remove(jugador)
         jugador.penalizar()
     }
+
 }
