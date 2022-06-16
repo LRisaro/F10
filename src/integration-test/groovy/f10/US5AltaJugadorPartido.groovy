@@ -19,7 +19,7 @@ class US5AltaJugadorPartido extends Specification {
     Jugador jugador = new Jugador()
     grupo.agregarAmigo(jugador)
     Cancha cancha = new Cancha(numero: 5)
-    Partido partido = new Casual(new Date(), cancha)
+    Partido partido = new Casual(new Date(), cancha, jugador)
 
     when:'Me anoto y confirmo'
     partido.anotarJugador(jugador)
@@ -36,7 +36,7 @@ class US5AltaJugadorPartido extends Specification {
     Jugador jugador = new Jugador()
     grupo.agregarAmigo(jugador)
     Cancha cancha = new Cancha(numero: 5)
-    Partido partido = new Casual(new Date(), cancha)
+    Partido partido = new Casual(new Date(), cancha, jugador)
 
     when:'Me anoto'
     partido.anotarJugador(jugador)
@@ -60,7 +60,7 @@ class US5AltaJugadorPartido extends Specification {
     jugador.penalizar()
     grupo.agregarAmigo(jugador)
     Cancha cancha = new Cancha(numero: 5)
-    Partido partido = new Casual(new Date(), cancha)
+    Partido partido = new Casual(new Date(), cancha, jugador)
 
     when:'Me anoto'
     partido.anotarJugador(jugador)

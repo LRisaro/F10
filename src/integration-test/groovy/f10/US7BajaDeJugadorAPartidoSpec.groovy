@@ -17,7 +17,7 @@ class US7BajaDeJugadorAPartidoSpec extends Specification {
         given:"Como jugador quiero darme de baja de un partido que confirmé"
             Jugador jugador1 = new Jugador()
             Jugador jugador2 = new Jugador()
-            Casual partido = new Casual(new Date(), new Cancha())
+            Casual partido = new Casual(new Date(), new Cancha(), jugador1)
             partido.confirmarJugador(jugador1)
             partido.confirmarJugador(jugador2)
             
@@ -33,7 +33,7 @@ class US7BajaDeJugadorAPartidoSpec extends Specification {
         given:"Como jugador quiero darme de baja de un partido que confirmé"
             Jugador jugador1 = new Jugador()
             Jugador jugador2 = new Jugador()
-            Casual partido = new Casual(new Date(), new Cancha())
+            Casual partido = new Casual(new Date(), new Cancha(), jugador1)
             partido.confirmarJugador(jugador1)
             partido.confirmarJugador(jugador2)
 

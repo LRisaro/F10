@@ -6,7 +6,7 @@ import spock.lang.Specification
 
 @Integration
 @Rollback
-class US8AltaDeUnJugadorAUnPartidoComoSuplenteSpec extends Specification {
+class US6AltaDeUnJugadorAUnPartidoComoSuplenteSpec extends Specification {
 
     def setup() {
     }
@@ -52,6 +52,7 @@ class US8AltaDeUnJugadorAUnPartidoComoSuplenteSpec extends Specification {
         partidoCasual.fecha = new Date();
         partidoCasual.cancha = cancha;
         partidoCasual.estado = EstadosPartido.PENDIENTE;
+        partidoCasual.organizador = jugador1;
 
         //Anoto jugadores
         partidoCasual.anotarJugador(jugador1);

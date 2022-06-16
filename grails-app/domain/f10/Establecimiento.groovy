@@ -8,13 +8,15 @@ class Establecimiento {
     String nombre;
     String telefono;
     Direccion direccion;
+    def ubicacion = new Tuple(0, 0)
     def canchasDisponibles = []
     def canchasReservadas = []
 
-    Establecimiento(nombre, telefono, direccion) {
+    Establecimiento(nombre, telefono, direccion, ubicacion) {
         this.nombre = nombre;
         this.telefono = telefono;
         this.direccion = direccion;
+        this.ubicacion = ubicacion;
     }
 
     def reservarCancha(numeroDeCancha)

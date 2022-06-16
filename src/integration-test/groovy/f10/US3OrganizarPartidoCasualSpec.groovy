@@ -30,7 +30,7 @@ class US3OrganizarPartidoCasualSpec extends Specification {
         Cancha cancha = new Cancha(numero: 5);
 
         def fecha = new Date();
-        Casual partidoCasual = new Casual(fecha, cancha);
+        Casual partidoCasual = new Casual(fecha, cancha, jugadorOrganizador);
         partidoCasual.anotarJugador(jugadorOrganizador);
         partidoCasual.confirmarJugador(jugadorOrganizador);
 
