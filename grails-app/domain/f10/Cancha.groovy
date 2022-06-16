@@ -5,5 +5,5 @@ class Cancha {
     static constraints = {
     }
 
-    String numero;
+    int numero;
 }

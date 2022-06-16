@@ -20,6 +20,7 @@ class US8AltaDeUnJugadorAUnPartidoComoSuplenteSpec extends Specification {
 
     void "Alta de un jugador a un partido como suplente"() {
 
+        given:"Como jugador de un grupo de amigos quiero anotarme para jugar un partido pero el cupo de jugadores está lleno"        
         // Reputacion
         Reputacion reputacion = new Reputacion(partidosAbandonados: 0, partidosJugados: 16);
 
@@ -40,7 +41,6 @@ class US8AltaDeUnJugadorAUnPartidoComoSuplenteSpec extends Specification {
         Jugador suplente = new Jugador(nombre: "suplente", edad: 18, email: "asd@asd.com", whatsapp: '123456789', reputacion: reputacionSuplente);
         Jugador suplente1 = new Jugador(nombre: "suplente1", edad: 18, email: "asd@asd.com", whatsapp: '123456789', reputacion: reputacionSuplente1);
 
-        given:"Como jugador de un grupo de amigos quiero anotarme para jugar un partido pero el cupo de jugadores está lleno"        
 
         // Grupo de amigos
         def jugadores = [jugador1, jugador2, jugador3, jugador4, jugador5, jugador6, jugador7, jugador8, jugador9, jugador10, suplente, suplente1];
