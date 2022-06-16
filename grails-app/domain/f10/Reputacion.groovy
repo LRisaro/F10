@@ -15,10 +15,10 @@ class Reputacion {
 
     def tieneBuenaReputacion() {
         if (partidosAbandonados == 0) {
-            return True
+            return true
         }
 
-        return False
+        return false
     }
 
 }

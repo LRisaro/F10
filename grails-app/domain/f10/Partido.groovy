@@ -23,7 +23,7 @@ abstract class Partido {
         if (jugador.reputacion.tieneBuenaReputacion()) {
             if (jugadoresAnotados.size < 10) {
                 jugadoresAnotados.add(jugador)
-        } else {
+            } else {
                 jugadoresSuplentes.add(jugador)
             }
         }
