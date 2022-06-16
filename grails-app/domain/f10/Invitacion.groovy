@@ -17,4 +17,8 @@ class Invitacion {
         this.partido.anotarJugador(jugador)
         this.partido.confirmarJugador(jugador)
     }
+
+    def negarInvitacion() {
+        this.jugador.invitacionesPendientes = []
+    }
 }
