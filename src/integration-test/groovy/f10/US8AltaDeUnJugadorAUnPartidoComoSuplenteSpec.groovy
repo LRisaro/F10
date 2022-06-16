@@ -9,10 +9,6 @@ import spock.lang.Specification
 class US8AltaDeUnJugadorAUnPartidoComoSuplenteSpec extends Specification {
 
     def setup() {
-        // un partido con jugadores
-
-        // dar de baja a un jugador
-        // subir a uno de los suplentes
     }
 
     def cleanup() {
