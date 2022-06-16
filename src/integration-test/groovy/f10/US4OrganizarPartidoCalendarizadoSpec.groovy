@@ -32,7 +32,7 @@ class US4OrganizarPartidoCalendarizadoSpec extends Specification {
         def fechaInicial = new Date();
         def periodicidad = 7;
 
-        Calendarizado partidoCalendarizado = new Calendarizado(fechaInicial, periodicidad, cancha);
+        Calendarizado partidoCalendarizado = new Calendarizado(fechaInicial, periodicidad, cancha, jugadorOrganizador);
 
         then:"Partido calendarizado."
 
