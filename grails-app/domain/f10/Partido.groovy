@@ -14,9 +14,9 @@ class Partido {
     EstadosPartido estado
 
     Partido(fecha, cancha) {
-        this.fecha = fecha
-        this.cancha = cancha
-        this.estado = EstadosPartido.PENDIENTE
+        this.fecha = fecha;
+        this.cancha = cancha;
+        this.estado = EstadosPartido.PENDIENTE;
     }
 
     def anotarJugador(jugador) {
@@ -34,7 +34,23 @@ class Partido {
         jugadoresConfirmados.add(jugador)
     }
 
-    def darDeBajaJugador(jugador) {
+    def anotarJugadorSuplente(jugador) {
+        jugadoresSuplentes.add(jugador);
+
+        // ordeno de menor a mayor porcentaje de partidos jugados (creo XD)
+        jugadoresSuplentes.sort { (it.reputacion.partidosJugados * 100) / (it.reputacion.partidosJugados + it.reputacion.partidosAbandonados) }
+    }
+
+    def darDeBajaJugadorAnotado(jugador)
+    {
+        jugadoresAnotados.remove(jugador);
+        
+        if(jugadoresSuplentes.size() > 0){
+            jugadoresAnotados.push(jugadoresSuplentes.pop());
+        }
+    }
+
+    def darDeBajaJugador(jugador){
         jugadoresConfirmados.remove(jugador)
         jugador.penalizar()
     }

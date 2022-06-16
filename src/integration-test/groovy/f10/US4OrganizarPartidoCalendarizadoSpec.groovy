@@ -38,7 +38,7 @@ class US4OrganizarPartidoCalendarizadoSpec extends Specification {
 
         partidoCalendarizado.partidos.size == 1; 
         def partidoEnCurso = partidoCalendarizado.proximoPartido();
-        partidoEnCurso.cancha.numero == "7";
+        partidoEnCurso.cancha.numero == 7;
         partidoEnCurso.estado == EstadosPartido.PENDIENTE;
     }
 }

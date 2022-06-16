@@ -6,10 +6,12 @@ class Direccion {
     }
 
     String calle;
-    String altura;
+    int altura;
+    String localidad;
 
-    Direccion(calle, altura) {
+    Direccion(localidad, calle, altura) {
         this.calle = calle;
         this.altura = altura;
+        this.localidad = localidad;
     }
 }
