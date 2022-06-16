@@ -17,6 +17,9 @@ abstract class Partido {
         this.fecha = fecha;
         this.cancha = cancha;
         this.estado = EstadosPartido.PENDIENTE;
+        this.jugadoresAnotados = [];
+        this.jugadoresConfirmados = [];
+        this.jugadoresSuplentes = [];
     }
 
     def anotarJugador(jugador) {
@@ -45,21 +48,15 @@ abstract class Partido {
         jugadoresSuplentes.sort { (it.reputacion.partidosJugados * 100) / (it.reputacion.partidosJugados + it.reputacion.partidosAbandonados) }
     }
 
-    def darDeBajaAJugador(jugador)
+    def darDeBajaJugadorAnotado(jugador)
     {
-        for(jugadorAnotado in jugadoresAnotados){
-            // en el futuro cencano esta comparacion tiene que ser por algo mejor que el nombre (Hay gente que se llama igual)
-            // por ejemplo por id
-           if(jugadorAnotado.nombre == jugador.nombre){
-                jugadoresAnotados.removeElement(jugadorAnotado)
-           }
-        }
+        jugadoresAnotados.remove(jugador);
         
         if(jugadoresSuplentes.size() > 0){
             jugadoresAnotados.push(jugadoresSuplentes.pop());
         }
     }
-    
+
     def darDeBajaJugador(jugador){
         jugadoresConfirmados.remove(jugador)
         jugador.penalizar()

@@ -57,8 +57,6 @@ class US8AltaDeUnJugadorAUnPartidoComoSuplenteSpec extends Specification {
         partidoCasual.cancha = cancha;
         partidoCasual.estado = EstadosPartido.PENDIENTE;
 
-        then:"Crear partido casual, completar los jugadores, anotar al suplente, dar de baja uno, anotar al suplente correcto."
-
         //Anoto jugadores
         partidoCasual.anotarJugador(jugador1);
         partidoCasual.anotarJugador(jugador2);
@@ -70,27 +68,28 @@ class US8AltaDeUnJugadorAUnPartidoComoSuplenteSpec extends Specification {
         partidoCasual.anotarJugador(jugador8);
         partidoCasual.anotarJugador(jugador9);
         partidoCasual.anotarJugador(jugador10);
-        
-        partidoCasual.jugadoresAnotados.size() == 10;
 
         //Anoto jugadores suplentes
         partidoCasual.anotarJugador(suplente);
         partidoCasual.anotarJugador(suplente1);
 
-        println partidoCasual.jugadoresSuplentes;
-        partidoCasual.jugadoresSuplentes.size() == 2;
-
-        //Obtengo al jugador que deberia ser sumado a la lista de anotados
+        //Obtengo al jugador que deberia ser sumado a la lista de anotados por su reputacion
         Jugador jugadorSuplenteCorrecto = partidoCasual.jugadoresSuplentes.pop();
         jugadorSuplenteCorrecto.nombre ==  "suplente1";
 
-        partidoCasual.anotarJugador(suplente);
+        partidoCasual.anotarJugador(suplente1);
 
-        //Doy de baja a un jugador de la lista de anotados
-        partidoCasual.darDeBajaAJugador(jugador1);
+        //Doy de baja a un jugador de la lista de anotados pero sumo uno suplente asi que no deberia cambiar el size
+        partidoCasual.darDeBajaJugadorAnotado(jugador1);
+
+        then:"Di de baja a un jugador pero como hay suplentes el numero de jugadores anotados no debe variar y mi lista de jugadores suplente debe disminuir en 1 unidad."
+
         partidoCasual.jugadoresAnotados.size() == 10;
+        partidoCasual.jugadoresSuplentes.size() == 1;
 
+        //Obtengo el jugador suplente que sume y lo comparo con el que deberia ser el correcto
         Jugador jugadorSuplenteCorrectoEnLaListaDeAnotados = partidoCasual.jugadoresAnotados.pop();
         jugadorSuplenteCorrecto.nombre ==  jugadorSuplenteCorrectoEnLaListaDeAnotados.nombre;
+
     }
 }
