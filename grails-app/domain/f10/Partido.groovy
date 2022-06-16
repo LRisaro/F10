@@ -43,11 +43,15 @@ class Partido {
         jugadoresSuplentes.sort { (it.reputacion.partidosJugados * 100) / (it.reputacion.partidosJugados + it.reputacion.partidosAbandonados) }
     }
 
-    def darDeBajaJugadorAnotado(jugador) {
-        jugadoresAnotados.remove(jugador)
 
-        if (jugadoresSuplentes.size() > 0) {
-            jugadoresAnotados.push(jugadoresSuplentes.pop())
+    //TODO Estos metodos no tienen que estar implementados aca. Tienen que ir en cada uno de los distintos tipos de partido.
+    def darDeBajaJugadorAnotado(jugador)
+    {
+        jugadoresAnotados.remove(jugador);
+        
+        if(jugadoresSuplentes.size() > 0){
+            jugadoresAnotados.push(jugadoresSuplentes.pop());
+
         }
     }
 
