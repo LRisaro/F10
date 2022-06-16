@@ -1,13 +1,13 @@
 package f10
 
-class UbicadorJugadores {
+class BuscadorJugadores {
 
     static constraints = {
     }
 
     def listaJugadores = [];
 
-    UbicadorJugadores() {
+    BuscadorJugadores() {
 
     }
 

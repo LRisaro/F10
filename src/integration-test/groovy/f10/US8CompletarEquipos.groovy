@@ -1,7 +1,6 @@
 package f10
 
 import grails.testing.mixin.integration.Integration
-import grails.gorm.transactions.*
 import spock.lang.Specification
 
 @Integration
@@ -22,7 +21,7 @@ class US8CompletarEquipos extends Specification {
     Establecimiento establecimiento = new Establecimiento("Test", "11111", new Direccion(localidad: "localidad2", calle: "Suipacha", altura: 288), new Tuple(100, 100))
     Cancha cancha = new Cancha(numero: 5)
     Partido partido = new Casual(new Date(), cancha, jugadorOrganizador)
-    UbicadorJugadores ubicador = new UbicadorJugadores()
+    BuscadorJugadores ubicador = new BuscadorJugadores()
     Reputacion reputacion = new Reputacion(partidosAbandonados: 0, partidosJugados: 16);
 
     // Jugadores
@@ -104,7 +103,7 @@ class US8CompletarEquipos extends Specification {
     Establecimiento establecimiento = new Establecimiento("Test", "11111", new Direccion(localidad: "localidad2", calle: "Suipacha", altura: 288), new Tuple(100, 100))
     Cancha cancha = new Cancha(numero: 5)
     Partido partido = new Casual(new Date(), cancha, jugadorOrganizador)
-    UbicadorJugadores ubicador = new UbicadorJugadores()
+    BuscadorJugadores ubicador = new BuscadorJugadores()
     Reputacion reputacion = new Reputacion(partidosAbandonados: 0, partidosJugados: 16);
 
     // Jugadores
@@ -200,7 +199,7 @@ class US8CompletarEquipos extends Specification {
     Establecimiento establecimiento = new Establecimiento("Test", "11111", new Direccion(localidad: "localidad2", calle: "Suipacha", altura: 288), new Tuple(100, 100))
     Cancha cancha = new Cancha(numero: 5)
     Partido partido = new Casual(new Date(), cancha, jugadorOrganizador)
-    UbicadorJugadores ubicador = new UbicadorJugadores()
+    BuscadorJugadores ubicador = new BuscadorJugadores()
     Reputacion reputacion = new Reputacion(partidosAbandonados: 0, partidosJugados: 16);
 
     // Jugadores
