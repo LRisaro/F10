@@ -90,4 +90,4 @@ bin/
 # End of https://www.toptal.com/developers/gitignore/api/groovy,visualstudiocode,grails
 
 build/
-.gradle/
+.*
