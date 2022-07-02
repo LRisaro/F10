@@ -14,14 +14,15 @@ class Jugador {
     def gruposDeAmigos = [];
     def invitacionesPendientes = [];
 
-    Jugador(nombre, edad, email, whatsapp, reputacion, ubicacion) {
+    Jugador(nombre, edad, email, whatsapp, ubicacion) {
+        new ValidacionesJugador(nombre, edad, email, whatsapp)
+            .validar();
+
         this.nombre = nombre;
         this.edad = edad;
         this.email = email;
         this.whatsapp = whatsapp;
         this.ubicacion = ubicacion;
-        this.reputacion = reputacion;
-        this.invitacionesPendientes = [];
     }
 
     def agregarGrupoDeAmigos(grupoDeAmigos) {
