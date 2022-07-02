@@ -38,3 +38,12 @@
 /build/test-results/*
 
 *.bin
+build/.dependencies
+.gradle/7.2/gc.properties
+.gradle/7.2/dependencies-accessors/gc.properties
+.gradle/buildOutputCleanup/buildOutputCleanup.lock
+.gradle/7.2/dependencies-accessors/dependencies-accessors.lock
+.gradle/7.2/fileHashes/fileHashes.lock
+.gradle/buildOutputCleanup/cache.properties
+.gradle/checksums/checksums.lock
+.gradle/vcs-1/gc.properties
